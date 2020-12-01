@@ -1,0 +1,8 @@
+{
+	"husky": {
+		"hooks": {
+			"pre-commit": "npx eslint --fix",
+			"pre-push": "npm test"
+		}
+	}
+}
