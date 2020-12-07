@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, useRouteMatch } from 'react-router-dom'
 
-import HomePage from '@pages/home'
+import HomePage from './HomePage'
 
 const Home = (): React.ReactElement => {
 	const { url } = useRouteMatch()
