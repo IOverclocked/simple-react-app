@@ -1,15 +1,25 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
 
-import Routes from './routes'
+import { Header } from 'src/layout/Header'
+import { Body } from 'src/layout/Body'
+import { Footer } from 'src/layout/Footer'
+import { GlobalStyles, theme } from 'src/styles'
+import { Routes } from 'src/Routes'
 
 const App = (): React.ReactElement => {
 	return (
-		<div className="App">
+		<ThemeProvider theme={theme}>
+			<GlobalStyles />
 			<BrowserRouter>
-				<Routes />
+				<Header />
+				<Body>
+					<Routes />
+				</Body>
+				<Footer />
 			</BrowserRouter>
-		</div>
+		</ThemeProvider>
 	)
 }
 
