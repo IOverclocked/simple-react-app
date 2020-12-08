@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route, useRouteMatch } from 'react-router-dom'
 
-import { HomePage } from './HomePage'
+import { Home } from './Home'
 
-const Home = (): React.ReactElement => {
+const HomePage = (): React.ReactElement => {
 	const { url } = useRouteMatch()
 
-	return <Route exact path={url} component={HomePage} />
+	return <Route exact path={url} component={Home} />
 }
 
-export { Home }
+export { HomePage }
